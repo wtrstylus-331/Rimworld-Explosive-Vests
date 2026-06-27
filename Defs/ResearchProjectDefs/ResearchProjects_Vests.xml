@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ResearchProjectDef>
+    <defName>EVWS_ExplosiveVests</defName>
+    <label>explosive apparel</label>
+    <description>Produce rigid vests rigged with explosive material which can be detonated by the wearer.</description>
+    <baseCost>1000</baseCost>
+    <researchViewX>6.00</researchViewX>
+    <researchViewY>5.50</researchViewY>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Machining</li>
+    </prerequisites>
+	<hiddenPrerequisites>
+      <li>ComplexClothing</li>
+	  <li>IEDs</li>
+    </hiddenPrerequisites>
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>EVWS_ExplosiveImplants</defName>
+    <label>explosive implants</label>
+    <description>Produce explosive material that can be implanted into patients, able to be detonated on command by the subject.</description>
+    <baseCost>800</baseCost>
+    <researchViewX>6.50</researchViewX>
+    <researchViewY>6.00</researchViewY>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>EVWS_ExplosiveVests</li>
+    </prerequisites>
+  </ResearchProjectDef>
+</Defs>

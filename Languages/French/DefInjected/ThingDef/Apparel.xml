@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+	<EVWS_VestTierOne.label>gilet explosif I</EVWS_VestTierOne.label>
+	<EVWS_VestTierOne.description>Un gilet assemblé avec un matériau explosif d’un rayon d’explosion réduit.</EVWS_VestTierOne.description>
+	
+	<EVWS_VestTierTwo.label>gilet explosif II</EVWS_VestTierTwo.label>
+	<EVWS_VestTierTwo.description>Un gilet assemblé avec plus matériau explosif d’un rayon d’explosion moyen.</EVWS_VestTierTwo.description>
+	
+	<EVWS_VestTierThree.label>gilet explosif III</EVWS_VestTierThree.label>
+	<EVWS_VestTierThree.description>Un gilet assemblé avec un matériau explosif plus volatil avec un rayon d'explosion immense. C'est tres dangereux.</EVWS_VestTierThree.description>
+	
+	<EVWS_AntigrainVest.label>gilet antigrain</EVWS_AntigrainVest.label>
+	<EVWS_AntigrainVest.description>Un gilet assemblé avec une ogive antigrain. Entraîne des dommages catastrophiques avec un énorme rayon d'explosion.</EVWS_AntigrainVest.description>
+	
+	<EVWS_VestKid.label>gilet explosif I pour enfant</EVWS_VestKid.label>
+	<EVWS_VestKid.description>Un petit gilet assemblé avec un matériau explosif d’un rayon d’explosion réduit.</EVWS_VestKid.description>
+	
+	<EVWS_VestKidTwo.label>gilet explosif II pour enfant</EVWS_VestKidTwo.label>
+	<EVWS_VestKidTwo.description>Un petit gilet assemblé avec plus matériau explosif d’un rayon d’explosion moyen.</EVWS_VestKidTwo.description>
+	
+	<EVWS_VestKidThree.label>gilet explosif III pour enfant</EVWS_VestKidThree.label>
+	<EVWS_VestKidThree.description>Un petit gilet assemblé avec un matériau explosif plus volatil avec un rayon d'explosion immense. C'est tres dangereux.</EVWS_VestKidThree.description>
+	
+	<EVWS_VestKidAntigrain.label>gilet antigrain pour enfant</EVWS_VestKidAntigrain.label>
+	<EVWS_VestKidAntigrain.description>Un petit gilet assemblé avec une ogive antigrain. Entraîne des dommages catastrophiques avec un énorme rayon d'explosion.</EVWS_VestKidAntigrain.description>
+</LanguageData>

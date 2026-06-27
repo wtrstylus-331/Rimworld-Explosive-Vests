@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<ThingDef Name="BodyPartExplosiveBase" ParentName="BodyPartBase" Abstract="True">
+    <techLevel>Industrial</techLevel>
+    <thingCategories>
+      <li>BodyPartsProsthetic</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Item/Health/HealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+      <color>(154,124,104)</color>
+    </graphicData>
+    <statBases>
+      <WorkToMake>15000</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <displayPriority>600</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+  
+  <ThingDef ParentName="UnfinishedBase">
+    <defName>UnfinishedHealthItemExplosive</defName>
+    <label>unfinished explosive implant</label>
+    <description>An unfinished explosive implant.</description>
+    <statBases>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Item/Unfinished/UnfinishedHealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(154,124,104)</color>
+    </graphicData>
+    <stuffCategories Inherit="false" />
+  </ThingDef>
+  
+  <ThingDef Name="BodyPartExplosiveMakeableBase" ParentName="BodyPartExplosiveBase" Abstract="True">
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+      <unfinishedThingDef>UnfinishedHealthItemExplosive</unfinishedThingDef>
+      <researchPrerequisite>EVWS_ExplosiveImplants</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+  
+	<HediffDef ParentName="ImplantHediffBase">
+    <defName>PrimedExplosivesHed</defName>
+    <label>primed explosives I</label>
+    <labelNoun>a batch of primed explosives</labelNoun>
+    <description>An installed torso implant that consists of condensed explosive material. Cannot be penetrated as easily and thus avoids the risk of accidental detonation. However, a detonation results in certain death of the user.</description>
+    <descriptionHyperlinks><ThingDef>PrimedExplosivesThing</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>PrimedExplosivesThing</spawnThingOnRemoved>
+	<comps>
+		<li Class="ExplosiveVest.HediffCompProperties_PrimedExplosives">
+			<minRadius>3.0</minRadius>
+			<maxRadius>5.0</maxRadius>
+			<minDamage>50</minDamage>
+			<maxDamage>75</maxDamage>
+			<fireChance>0.1</fireChance>
+			<damChance>1.35</damChance>
+		</li>
+	</comps>
+  </HediffDef>
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>PrimedExplosivesHedTwo</defName>
+    <label>primed explosives II</label>
+    <labelNoun>a batch of primed explosives</labelNoun>
+    <description>An installed torso implant that consists of condensed explosive material. Cannot be penetrated as easily and thus avoids the risk of accidental detonation. However, a detonation results in certain death of the user.</description>
+    <descriptionHyperlinks><ThingDef>PrimedExplosivesThing</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>PrimedExplosivesThing</spawnThingOnRemoved>
+	<comps>
+		<li Class="ExplosiveVest.HediffCompProperties_PrimedExplosives">
+			<minRadius>5.5</minRadius>
+			<maxRadius>7.0</maxRadius>
+			<minDamage>60</minDamage>
+			<maxDamage>90</maxDamage>
+			<fireChance>0.2</fireChance>
+			<damChance>1.45</damChance>
+		</li>
+	</comps>
+  </HediffDef>
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>PrimedExplosivesHedThree</defName>
+    <label>primed explosives III</label>
+    <labelNoun>a batch of primed explosives</labelNoun>
+    <description>An installed torso implant that consists of condensed explosive material. Cannot be penetrated as easily and thus avoids the risk of accidental detonation. However, a detonation results in certain death of the user.</description>
+    <descriptionHyperlinks><ThingDef>PrimedExplosivesThing</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>PrimedExplosivesThing</spawnThingOnRemoved>
+	<comps>
+		<li Class="ExplosiveVest.HediffCompProperties_PrimedExplosives">
+			<minRadius>7.0</minRadius>
+			<maxRadius>9.0</maxRadius>
+			<minDamage>100</minDamage>
+			<maxDamage>130</maxDamage>
+			<fireChance>0.4</fireChance>
+			<damChance>1.55</damChance>
+		</li>
+	</comps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartExplosiveMakeableBase">
+    <defName>PrimedExplosivesThing</defName>
+    <label>primed explosives I</label>
+    <description>A torso implant that consists of condensed explosive material. Since it is far deeper in the body, outside forces cannot penetrate and accidentally detonate the material. Being an implant, it is less cumbersome than a vest, but a detonation results in certain death of the user.</description>
+    <descriptionHyperlinks><RecipeDef>InstallPrimedExplosives</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Steel>20</Steel>
+	  <Chemfuel>20</Chemfuel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <techHediffsTags>
+      <li>Simple</li>
+    </techHediffsTags>
+  </ThingDef>
+  
+  <ThingDef ParentName="BodyPartExplosiveMakeableBase">
+    <defName>PrimedExplosivesThingTwo</defName>
+    <label>primed explosives II</label>
+    <description>A torso implant that consists of condensed explosive material. Since it is far deeper in the body, outside forces cannot penetrate and accidentally detonate the material. Being an implant, it is less cumbersome than a vest, but a detonation results in certain death of the user.</description>
+    <descriptionHyperlinks><RecipeDef>InstallPrimedExplosivesTwo</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Steel>20</Steel>
+	  <Chemfuel>35</Chemfuel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <techHediffsTags>
+      <li>Simple</li>
+    </techHediffsTags>
+  </ThingDef>
+  
+  <ThingDef ParentName="BodyPartExplosiveMakeableBase">
+    <defName>PrimedExplosivesThingThree</defName>
+    <label>primed explosives III</label>
+    <description>A torso implant that consists of condensed explosive material. Since it is far deeper in the body, outside forces cannot penetrate and accidentally detonate the material. Being an implant, it is less cumbersome than a vest, but a detonation results in certain death of the user.</description>
+    <descriptionHyperlinks><RecipeDef>InstallPrimedExplosivesThree</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Steel>20</Steel>
+	  <Chemfuel>50</Chemfuel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+    <techHediffsTags>
+      <li>Simple</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>InstallPrimedExplosives</defName>
+    <label>install primed explosives I</label>
+    <description>Install a batch of primed explosives I.</description>
+    <descriptionHyperlinks>
+      <ThingDef>PrimedExplosivesThing</ThingDef>
+      <HediffDef>PrimedExplosivesHed</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing primed explosives I.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>PrimedExplosivesThing</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>PrimedExplosivesThing</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Torso</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>PrimedExplosivesHed</addsHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>InstallPrimedExplosivesTwo</defName>
+    <label>install primed explosives II</label>
+    <description>Install a batch of primed explosives II.</description>
+    <descriptionHyperlinks>
+      <ThingDef>PrimedExplosivesThingTwo</ThingDef>
+      <HediffDef>PrimedExplosivesHedTwo</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing primed explosives II.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>PrimedExplosivesThingTwo</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>PrimedExplosivesThingTwo</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Torso</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>PrimedExplosivesHedTwo</addsHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>InstallPrimedExplosivesThree</defName>
+    <label>install primed explosives III</label>
+    <description>Install a batch of primed explosives III.</description>
+    <descriptionHyperlinks>
+      <ThingDef>PrimedExplosivesThingThree</ThingDef>
+      <HediffDef>PrimedExplosivesHedThree</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing primed explosives III.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>PrimedExplosivesThingThree</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>PrimedExplosivesThingThree</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Torso</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>PrimedExplosivesHedThree</addsHediff>
+  </RecipeDef>
+</Defs>

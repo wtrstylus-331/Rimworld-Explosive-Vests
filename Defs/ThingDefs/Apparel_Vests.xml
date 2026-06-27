@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+<!-- Too lazy to make a whole new file to define this category def. -->
+	<ThingCategoryDef>
+      <defName>ApparelExplosiveVest</defName>
+      <label>explosive apparel</label>
+      <parent>Apparel</parent>
+    </ThingCategoryDef>
+
+<ThingDef ParentName="ArmorMachineableBase">
+    <defName>EVWS_VestTierOne</defName>
+    <description>A vest rigged with explosive material with a small blast radius.</description>
+    <label>explosive vest I</label>
+    <recipeMaker>
+      <researchPrerequisite>EVWS_ExplosiveVests</researchPrerequisite>
+	  <unfinishedThingDef>UnfinishedExplosiveVest</unfinishedThingDef>
+	  <skillRequirements>
+			<Crafting>4</Crafting>
+		</skillRequirements>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/EVest/EVest</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costList>
+      <Cloth>10</Cloth>
+      <Steel>30</Steel>
+	  <Chemfuel>20</Chemfuel>
+    </costList>
+    <thingCategories>
+      <li>ApparelExplosiveVest</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <WorkToMake>7000</WorkToMake>
+      <Mass>4</Mass>
+	  <Flammability>0.6</Flammability>
+      <ArmorRating_Sharp>0.90</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.30</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.20</ArmorRating_Heat>
+      <Insulation_Cold>1</Insulation_Cold>
+      <EquipDelay>4</EquipDelay>
+    </statBases>
+	<equippedStatOffsets>
+      <MoveSpeed>-0.10</MoveSpeed>
+	  <MentalBreakThreshold>0.10</MentalBreakThreshold>
+	  <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.15</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+	<!--generateAllowChance>0</generateAllowChance-->
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/EVest/EVest</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+      </layers>
+	  <tags>
+	  <li>EVWS_ExplosiveVest</li>
+	  </tags>
+    </apparel>
+	<comps>
+		<li Class="ExplosiveVest.CompProperties_ExplosiveVest">
+			<minRadius>3.0</minRadius>
+			<maxRadius>5.0</maxRadius>
+			<minDamage>50</minDamage>
+			<maxDamage>75</maxDamage>
+			<fireChance>0.1</fireChance>
+			<damChance>1.35</damChance>
+		</li>
+	</comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="ArmorMachineableBase">
+    <defName>EVWS_VestTierTwo</defName>
+    <description>A vest rigged with more explosive material that covers a larger blast radius.</description>
+    <label>explosive vest II</label>
+    <recipeMaker>
+      <researchPrerequisite>EVWS_ExplosiveVests</researchPrerequisite>
+	  <unfinishedThingDef>UnfinishedExplosiveVestTwo</unfinishedThingDef>
+	  <skillRequirements>
+			<Crafting>4</Crafting>
+		</skillRequirements>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/EVest/EVest</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costList>
+      <Cloth>15</Cloth>
+      <Steel>40</Steel>
+	  <Chemfuel>40</Chemfuel>
+    </costList>
+    <thingCategories>
+      <li>ApparelExplosiveVest</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>70</MaxHitPoints>
+      <WorkToMake>7000</WorkToMake>
+      <Mass>4.5</Mass>
+	  <Flammability>0.7</Flammability>
+      <ArmorRating_Sharp>0.95</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.20</ArmorRating_Heat>
+      <Insulation_Cold>1</Insulation_Cold>
+      <EquipDelay>4</EquipDelay>
+    </statBases>
+	<equippedStatOffsets>
+      <MoveSpeed>-0.10</MoveSpeed>
+	  <MentalBreakThreshold>0.15</MentalBreakThreshold>
+	  <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.20</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+	<!-- <generateAllowChance>0</generateAllowChance> -->
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/EVest/EVest</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+      </layers>
+	  <tags>
+	  <li>EVWS_ExplosiveVest</li>
+	  </tags>
+    </apparel>
+	<comps>
+		<li Class="ExplosiveVest.CompProperties_ExplosiveVest">
+			<minRadius>5.5</minRadius>
+			<maxRadius>7.0</maxRadius>
+			<minDamage>60</minDamage>
+			<maxDamage>90</maxDamage>
+			<fireChance>0.2</fireChance>
+			<damChance>1.45</damChance>
+		</li>
+	</comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="ArmorMachineableBase">
+    <defName>EVWS_VestTierThree</defName>
+    <description>A vest rigged with highly volatile explosive material, thus covering a huge blast radius, very dangerous.</description>
+    <label>explosive vest III</label>
+    <recipeMaker>
+      <researchPrerequisite>EVWS_ExplosiveVests</researchPrerequisite>
+	  <unfinishedThingDef>UnfinishedExplosiveVestThree</unfinishedThingDef>
+	  <skillRequirements>
+			<Crafting>6</Crafting>
+		</skillRequirements>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/EVest/EVest</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costList>
+      <Cloth>15</Cloth>
+      <Steel>50</Steel>
+	  <Chemfuel>60</Chemfuel>
+	  <ComponentIndustrial>1</ComponentIndustrial>
+    </costList>
+    <thingCategories>
+      <li>ApparelExplosiveVest</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <WorkToMake>8000</WorkToMake>
+      <Mass>5.5</Mass>
+	  <Flammability>0.7</Flammability>
+      <ArmorRating_Sharp>1.00</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.50</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.20</ArmorRating_Heat>
+      <Insulation_Cold>1</Insulation_Cold>
+      <EquipDelay>4</EquipDelay>
+    </statBases>
+	<equippedStatOffsets>
+      <MoveSpeed>-0.15</MoveSpeed>
+	  <MentalBreakThreshold>0.20</MentalBreakThreshold>
+	  <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.25</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+	<!--generateAllowChance>0</generateAllowChance-->
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/EVest/EVest</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+      </layers>
+	  <tags>
+	  <li>EVWS_ExplosiveVest</li>
+	  </tags>
+    </apparel>
+	<comps>
+		<li Class="ExplosiveVest.CompProperties_ExplosiveVest">
+			<minRadius>7.0</minRadius>
+			<maxRadius>9.0</maxRadius>
+			<minDamage>100</minDamage>
+			<maxDamage>130</maxDamage>
+			<fireChance>0.4</fireChance>
+			<damChance>1.55</damChance>
+		</li>
+	</comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="ArmorMachineableBase">
+    <defName>EVWS_AntigrainVest</defName>
+    <description>A vest strapped with an antigrain warhead. Leads to catastrophic damage with a huge explosion radius.</description>
+    <label>antigrain vest</label>
+    <recipeMaker>
+      <researchPrerequisite>EVWS_ExplosiveVests</researchPrerequisite>
+	  <unfinishedThingDef>UnfinishedExplosiveVestAntigrain</unfinishedThingDef>
+	  <skillRequirements>
+			<Crafting>6</Crafting>
+		</skillRequirements>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/EVestAntigrain/EVestAntigrain</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costList>
+      <Cloth>15</Cloth>
+      <Steel>50</Steel>
+	  <Shell_AntigrainWarhead>1</Shell_AntigrainWarhead>
+    </costList>
+    <thingCategories>
+      <li>ApparelExplosiveVest</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>90</MaxHitPoints>
+      <WorkToMake>9000</WorkToMake>
+      <Mass>6.5</Mass>
+	  <Flammability>0.7</Flammability>
+      <ArmorRating_Sharp>1.00</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.50</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.20</ArmorRating_Heat>
+      <Insulation_Cold>1</Insulation_Cold>
+      <EquipDelay>5</EquipDelay>
+    </statBases>
+	<equippedStatOffsets>
+      <MoveSpeed>-0.2</MoveSpeed>
+	  <MentalBreakThreshold>0.25</MentalBreakThreshold>
+	  <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.35</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+	<!--generateAllowChance>0</generateAllowChance-->
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/EVestAntigrain/EVestAntigrain</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+      </layers>
+	  <tags>
+	  <li>EVWS_ExplosiveVest</li>
+	  </tags>
+    </apparel>
+	<comps>
+		<li Class="ExplosiveVest.CompProperties_ExplosiveVest">
+			<minRadius>12.0</minRadius>
+			<maxRadius>18.0</maxRadius>
+			<minDamage>400</minDamage>
+			<maxDamage>550</maxDamage>
+			<fireChance>0.7</fireChance>
+			<damChance>1.8</damChance>
+		</li>
+	</comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="ChildApparelMakeableBase" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>EVWS_VestKid</defName>
+    <label>kid explosive vest I</label>
+    <description>A smaller vest rigged with explosive material with a small blast radius.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/EVestKid/EVestKid</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.7, 0.7)</drawSize>
+    </graphicData>
+	<recipeMaker>
+      <researchPrerequisite>EVWS_ExplosiveVests</researchPrerequisite>
+	  <unfinishedThingDef>UnfinishedExplosiveVestKid</unfinishedThingDef>
+	  <skillRequirements>
+			<Crafting>4</Crafting>
+		</skillRequirements>
+    </recipeMaker>
+	<thingCategories>
+      <li>ApparelExplosiveVest</li>
+    </thingCategories>
+	<costStuffCount>5</costStuffCount>
+    <costList>
+      <Steel>10</Steel>
+	  <Chemfuel>20</Chemfuel>
+    </costList>
+	<equippedStatOffsets>
+      <MoveSpeed>-0.15</MoveSpeed>
+	  <MentalBreakThreshold>0.15</MentalBreakThreshold>
+	  <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.15</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <WorkToMake>3000</WorkToMake>
+      <Mass>2.5</Mass>
+	  <Flammability>0.7</Flammability>
+      <ArmorRating_Sharp>0.70</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.30</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.16</ArmorRating_Heat>
+      <Insulation_Cold>1</Insulation_Cold>
+      <EquipDelay>2.5</EquipDelay>
+    </statBases>
+	<generateAllowChance>0</generateAllowChance>
+    <apparel>
+	<tags>
+	  <li>EVWS_ExplosiveVest</li>
+	  </tags>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/EVestKid/EVestKid</wornGraphicPath>
+    </apparel>
+	<comps>
+		<li Class="ExplosiveVest.CompProperties_ExplosiveVest">
+			<minRadius>2.0</minRadius>
+			<maxRadius>4.0</maxRadius>
+			<minDamage>25</minDamage>
+			<maxDamage>45</maxDamage>
+			<fireChance>0.1</fireChance>
+			<damChance>1.35</damChance>
+		</li>
+	</comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="ChildApparelMakeableBase" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>EVWS_VestKidTwo</defName>
+    <label>kid explosive vest II</label>
+    <description>A smaller vest rigged with more explosive material that covers a larger blast radius.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/EVestKid/EVestKid</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.7, 0.7)</drawSize>
+    </graphicData>
+	<recipeMaker>
+      <researchPrerequisite>EVWS_ExplosiveVests</researchPrerequisite>
+	  <unfinishedThingDef>UnfinishedExplosiveVestKidTwo</unfinishedThingDef>
+	  <skillRequirements>
+			<Crafting>5</Crafting>
+		</skillRequirements>
+    </recipeMaker>
+	<thingCategories>
+      <li>ApparelExplosiveVest</li>
+    </thingCategories>
+	<costStuffCount>10</costStuffCount>
+    <costList>
+      <Steel>10</Steel>
+	  <Chemfuel>40</Chemfuel>
+    </costList>
+	<equippedStatOffsets>
+      <MoveSpeed>-0.15</MoveSpeed>
+	  <MentalBreakThreshold>0.15</MentalBreakThreshold>
+	  <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.15</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <WorkToMake>3000</WorkToMake>
+      <Mass>2.5</Mass>
+	  <Flammability>0.7</Flammability>
+      <ArmorRating_Sharp>0.70</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.30</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.16</ArmorRating_Heat>
+      <Insulation_Cold>1</Insulation_Cold>
+      <EquipDelay>2.5</EquipDelay>
+    </statBases>
+	<generateAllowChance>0</generateAllowChance>
+    <apparel>
+	<tags>
+	  <li>EVWS_ExplosiveVest</li>
+	  </tags>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/EVestKid/EVestKid</wornGraphicPath>
+    </apparel>
+	<comps>
+		<li Class="ExplosiveVest.CompProperties_ExplosiveVest">
+			<minRadius>4.5</minRadius>
+			<maxRadius>6.5</maxRadius>
+			<minDamage>55</minDamage>
+			<maxDamage>80</maxDamage>
+			<fireChance>0.2</fireChance>
+			<damChance>1.45</damChance>
+		</li>
+	</comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="ChildApparelMakeableBase" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>EVWS_VestKidThree</defName>
+    <label>kid explosive vest III</label>
+    <description>A smaller vest rigged with highly volatile explosive material, thus covering a huge blast radius, very dangerous.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/EVestKid/EVestKid</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.7, 0.7)</drawSize>
+    </graphicData>
+	<recipeMaker>
+      <researchPrerequisite>EVWS_ExplosiveVests</researchPrerequisite>
+	  <unfinishedThingDef>UnfinishedExplosiveVestKidThree</unfinishedThingDef>
+	  <skillRequirements>
+			<Crafting>5</Crafting>
+		</skillRequirements>
+    </recipeMaker>
+	<thingCategories>
+      <li>ApparelExplosiveVest</li>
+    </thingCategories>
+	<costStuffCount>15</costStuffCount>
+    <costList>
+      <Steel>20</Steel>
+	  <Chemfuel>70</Chemfuel>
+    </costList>
+	<equippedStatOffsets>
+      <MoveSpeed>-0.15</MoveSpeed>
+	  <MentalBreakThreshold>0.2</MentalBreakThreshold>
+	  <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.2</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <WorkToMake>3000</WorkToMake>
+      <Mass>2.5</Mass>
+	  <Flammability>0.7</Flammability>
+      <ArmorRating_Sharp>0.70</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.30</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.16</ArmorRating_Heat>
+      <Insulation_Cold>1</Insulation_Cold>
+      <EquipDelay>2.5</EquipDelay>
+    </statBases>
+	<generateAllowChance>0</generateAllowChance>
+    <apparel>
+	<tags>
+	  <li>EVWS_ExplosiveVest</li>
+	  </tags>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/EVestKid/EVestKid</wornGraphicPath>
+    </apparel>
+	<comps>
+		<li Class="ExplosiveVest.CompProperties_ExplosiveVest">
+			<minRadius>6.5</minRadius>
+			<maxRadius>8.5</maxRadius>
+			<minDamage>80</minDamage>
+			<maxDamage>120</maxDamage>
+			<fireChance>0.4</fireChance>
+			<damChance>1.55</damChance>
+		</li>
+	</comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="ChildApparelMakeableBase" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>EVWS_VestKidAntigrain</defName>
+    <label>kid antigrain vest</label>
+    <description>A smaller vest strapped with an antigrain warhead. Leads to catastrophic damage with a huge explosion radius.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/EVestKidAntigrain/EVestKidAntigrain</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.7, 0.7)</drawSize>
+    </graphicData>
+	<recipeMaker>
+      <researchPrerequisite>EVWS_ExplosiveVests</researchPrerequisite>
+	  <unfinishedThingDef>UnfinishedAntigrainVestKid</unfinishedThingDef>
+	  <skillRequirements>
+			<Crafting>6</Crafting>
+		</skillRequirements>
+    </recipeMaker>
+	<thingCategories>
+      <li>ApparelExplosiveVest</li>
+    </thingCategories>
+	<costStuffCount>5</costStuffCount>
+    <costList>
+      <Steel>20</Steel>
+	  <Shell_AntigrainWarhead>1</Shell_AntigrainWarhead>
+    </costList>
+	<equippedStatOffsets>
+      <MoveSpeed>-0.15</MoveSpeed>
+	  <MentalBreakThreshold>0.25</MentalBreakThreshold>
+	  <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.25</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <WorkToMake>3000</WorkToMake>
+      <Mass>2.5</Mass>
+	  <Flammability>0.7</Flammability>
+      <ArmorRating_Sharp>0.70</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.30</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.16</ArmorRating_Heat>
+      <Insulation_Cold>1</Insulation_Cold>
+      <EquipDelay>2.5</EquipDelay>
+    </statBases>
+	<generateAllowChance>0</generateAllowChance>
+    <apparel>
+	<tags>
+	  <li>EVWS_ExplosiveVest</li>
+	  </tags>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/EVestKidAntigrain/EVestKidAntigrain</wornGraphicPath>
+    </apparel>
+	<comps>
+		<li Class="ExplosiveVest.CompProperties_ExplosiveVest">
+			<minRadius>11.0</minRadius>
+			<maxRadius>16.0</maxRadius>
+			<minDamage>385</minDamage>
+			<maxDamage>500</maxDamage>
+			<fireChance>0.7</fireChance>
+			<damChance>1.8</damChance>
+		</li>
+	</comps>
+  </ThingDef>
+</Defs>
