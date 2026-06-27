@@ -10,7 +10,7 @@ namespace ExplosiveVest
     {
         private Pawn TargetPawn => job.targetA.Thing as Pawn;
 
-        private const float DetonationRange = 2.75f;
+        private const float DetonationRange = 2.6f;
 
         private static readonly string[] BomberLines =
         {
@@ -18,6 +18,7 @@ namespace ExplosiveVest
             "Aaaagghhh!",
             "I regret nothing!",
             "Have a piece of this!",
+            "Take this!",
             ""
         };
 
