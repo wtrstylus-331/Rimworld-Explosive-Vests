@@ -49,6 +49,11 @@ namespace ExplosiveVest
 
         public void Detonate()
         {
+            if (alreadyDetonated || wearer == null || wearer.Dead)
+                return;
+            alreadyDetonated = true;
+
+
             IntVec3 pos = wearer.PositionHeld;
             Map map = wearer?.MapHeld;
 
@@ -85,12 +90,26 @@ namespace ExplosiveVest
                 null
                 );
 
-            alreadyDetonated = true;
 
             if (wearer != null)
             {
                 wearer.Kill(dInfo);
-                wearer.health.RemoveHediff(parent);
+                //wearer.health.RemoveHediff(parent);
+
+                var hediffs = wearer.health.hediffSet.hediffs;
+
+                for (int i = hediffs.Count - 1; i >= 0; i--)
+                {
+                    Hediff h = hediffs[i];
+
+                    if (h.def.defName == "PrimedExplosivesHed"
+                        || h.def.defName == "PrimedExplosivesHedTwo"
+                        || h.def.defName == "PrimedExplosivesHedThree")
+                    {
+                        wearer.health.RemoveHediff(h);
+                    }
+                }
+
             }
         }
     }
