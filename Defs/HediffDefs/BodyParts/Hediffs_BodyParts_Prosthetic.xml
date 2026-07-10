@@ -242,4 +242,40 @@
     </appliedOnFixedBodyParts>
     <addsHediff>PrimedExplosivesHedThree</addsHediff>
   </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>RemovePrimedExplosivesOne</defName>
+    <label>remove primed explosives I</label>
+    <description>Remove the primed explosives.</description>
+    <descriptionHyperlinks>
+      <ThingDef>PrimedExplosivesThing</ThingDef>
+      <HediffDef>PrimedExplosivesHed</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing primed explosives I.</jobString>
+    <removesHediff>PrimedExplosivesHed</removesHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>RemovePrimedExplosivesTwo</defName>
+    <label>remove primed explosives II</label>
+    <description>Remove the primed explosives.</description>
+    <descriptionHyperlinks>
+      <ThingDef>PrimedExplosivesThingTwo</ThingDef>
+      <HediffDef>PrimedExplosivesHedTwo</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing primed explosives II.</jobString>
+    <removesHediff>PrimedExplosivesHedTwo</removesHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>RemovePrimedExplosivesThree</defName>
+    <label>remove primed explosives III</label>
+    <description>Remove the primed explosives.</description>
+    <descriptionHyperlinks>
+      <ThingDef>PrimedExplosivesThingThree</ThingDef>
+      <HediffDef>PrimedExplosivesHedThree</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing primed explosives III.</jobString>
+    <removesHediff>PrimedExplosivesHedThree</removesHediff>
+  </RecipeDef>
 </Defs>
