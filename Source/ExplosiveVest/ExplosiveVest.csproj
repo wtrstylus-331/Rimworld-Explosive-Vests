@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EditCommonality.cs" />
     <Compile Include="HediffCompProperties_PrimedExplosives.cs" />
     <Compile Include="Comp_PrimedExplosives.cs" />
     <Compile Include="EVWS_JobDefOf.cs" />
@@ -60,6 +61,8 @@
     <Compile Include="HarmonyPatches.cs" />
     <Compile Include="JobGiver_BomberCharge.cs" />
     <Compile Include="Patch_FightEnemy.cs" />
+    <Compile Include="SettingsModel.cs" />
+    <Compile Include="SettingsWindow.cs" />
     <Compile Include="Util.cs" />
     <Compile Include="VestIgnoreTraits.cs" />
     <Compile Include="CompProperties_ExplosiveVest.cs" />
