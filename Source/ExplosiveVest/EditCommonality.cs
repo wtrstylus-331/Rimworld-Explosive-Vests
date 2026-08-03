@@ -23,10 +23,13 @@ namespace ExplosiveVest
 
             foreach (FactionDef faction in DefDatabase<FactionDef>.AllDefs)
             {
-                if (faction.defName == "PirateBandBase"
+                if (faction.defName == "Pirate"
                     || faction.defName == "PirateWaster"
                     || faction.defName == "PirateYttakin")
                 {
+                    if (faction.pawnGroupMakers == null)
+                        continue;
+
                     foreach (PawnGroupMaker group in faction.pawnGroupMakers)
                     {
                         if (!IsBomberGroup(group))
