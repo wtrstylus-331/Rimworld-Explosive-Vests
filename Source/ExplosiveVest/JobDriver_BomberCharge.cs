@@ -60,7 +60,10 @@ namespace ExplosiveVest
             Toil warning = new Toil();
             warning.initAction = () =>
             {
-                MoteMaker.ThrowText(pawn.DrawPos, pawn.Map, GenerateTextMote());
+                if (pawn?.Map != null)
+                {
+                    MoteMaker.ThrowText(pawn.DrawPos, pawn.Map, GenerateTextMote());
+                }
             };
             warning.defaultDuration = 60;
             warning.defaultCompleteMode = ToilCompleteMode.Delay;
@@ -84,7 +87,7 @@ namespace ExplosiveVest
             {
                 comp.Detonate();
             }
-            else
+            else if (pawn?.Map != null)
             {
                 GenExplosion.DoExplosion(
                     pawn.Position,
@@ -96,7 +99,7 @@ namespace ExplosiveVest
                 );
             }
 
-            if (!pawn.Dead)
+            if (pawn != null && !pawn.Dead)
                 pawn.Kill(null);
         }
     }

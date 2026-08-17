@@ -10,6 +10,12 @@ namespace ExplosiveVest
             Pawn pawn = req.Thing as Pawn;
             if (pawn == null) return null;
 
+            bool wearingVest = pawn.apparel?.WornApparel
+                .Any(a => a.def.defName.StartsWith("EVWS_")) ?? false;
+
+            if (!wearingVest)
+                return null;
+
             if (pawn.story?.traits != null &&
                 (pawn.story.traits.HasTrait(TraitDefOf.Psychopath) ||
                  pawn.story.traits.HasTrait(TraitDefOf.Bloodlust)))

@@ -94,22 +94,6 @@ namespace ExplosiveVest
             if (wearer != null)
             {
                 wearer.Kill(dInfo);
-                //wearer.health.RemoveHediff(parent);
-
-                var hediffs = wearer.health.hediffSet.hediffs;
-
-                for (int i = hediffs.Count - 1; i >= 0; i--)
-                {
-                    Hediff h = hediffs[i];
-
-                    if (h.def.defName == "PrimedExplosivesHed"
-                        || h.def.defName == "PrimedExplosivesHedTwo"
-                        || h.def.defName == "PrimedExplosivesHedThree")
-                    {
-                        wearer.health.RemoveHediff(h);
-                    }
-                }
-
             }
         }
     }
