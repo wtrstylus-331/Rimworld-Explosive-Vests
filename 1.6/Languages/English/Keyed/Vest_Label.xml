@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+	<EV_DetonateVestLabel>Detonate Vest</EV_DetonateVestLabel>
+	<EV_DetontateVestDesc>Signal the explosive material to detonate, potentially killing the wearer in the process.</EV_DetontateVestDesc>
+</LanguageData>

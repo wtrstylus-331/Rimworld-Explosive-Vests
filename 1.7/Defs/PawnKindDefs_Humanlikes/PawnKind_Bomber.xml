@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<PawnKindDef Name="root_sb" Abstract="True">
+		<race>Human</race>
+		<defaultFactionDef>Pirate</defaultFactionDef>
+		<chemicalAddictionChance>0.10</chemicalAddictionChance>
+		<backstoryCryptosleepCommonality>0.05</backstoryCryptosleepCommonality>
+		<invNutrition>1.5</invNutrition>
+		<biocodeWeaponChance>0.1</biocodeWeaponChance>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="root_sb" Name="SuicideBomberBase" Abstract="True">
+		<label>suicide bomber</label>
+		<itemQuality>Normal</itemQuality>
+		<apparelTags>
+			<li>IndustrialBasic</li>
+			<li>EVWS_ExplosiveVest</li>
+		</apparelTags>
+		<weaponMoney>60~200</weaponMoney>
+		<weaponTags>
+			<li>MedievalMeleeBasic</li>
+			<li>NeolithicMeleeBasic</li>
+		</weaponTags>
+		<techHediffsMoney>50~50</techHediffsMoney>
+		<techHediffsTags>
+			<li>Poor</li>
+		</techHediffsTags>
+		<inventoryOptions>
+			<skipChance>0.9</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>MedicineIndustrial</thingDef>
+					<countRange>1</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+		<techHediffsChance>0.15</techHediffsChance>
+		<initialWillRange>0~5</initialWillRange>
+		<initialResistanceRange>9~15</initialResistanceRange>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="SuicideBomberBase">
+		<defName>SuicideBomberOne</defName>
+		<apparelMoney>300~900</apparelMoney>
+		<combatPower>55</combatPower>
+		<apparelRequired>
+			<li>EVWS_VestTierOne</li>
+		</apparelRequired>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="SuicideBomberBase">
+		<defName>SuicideBomberTwo</defName>
+		<apparelMoney>500~900</apparelMoney>
+		<combatPower>60</combatPower>
+		<apparelRequired>
+			<li>EVWS_VestTierTwo</li>
+		</apparelRequired>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="SuicideBomberBase">
+		<defName>SuicideBomberThree</defName>
+		<apparelMoney>700~900</apparelMoney>
+		<combatPower>75</combatPower>
+		<apparelRequired>
+			<li>EVWS_VestTierThree</li>
+		</apparelRequired>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="SuicideBomberBase">
+		<defName>SuicideBomberAntigrain</defName>
+		<apparelMoney>800~1100</apparelMoney>
+		<combatPower>90</combatPower>
+		<apparelRequired>
+			<li>EVWS_AntigrainVest</li>
+		</apparelRequired>
+	</PawnKindDef>
+</Defs>

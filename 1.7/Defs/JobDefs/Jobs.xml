@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <JobDef>
+    <defName>EVWS_BomberCharge</defName>
+    <driverClass>ExplosiveVest.JobDriver_BomberCharge</driverClass>
+    <reportString>charging target</reportString>
+    <alwaysShowWeapon>true</alwaysShowWeapon>
+  </JobDef>
+</Defs>

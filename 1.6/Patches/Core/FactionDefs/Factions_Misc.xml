@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<!-- core -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers</xpath>
+		<value>
+			<li>
+				<kindDef>Combat</kindDef>
+				<commonality>15</commonality>
+				<disallowedStrategies>
+					<li>Siege</li>
+				</disallowedStrategies>
+				<options>
+					<SuicideBomberThree>2</SuicideBomberThree>
+					<SuicideBomberTwo>6</SuicideBomberTwo>
+					<SuicideBomberOne>12</SuicideBomberOne>
+					<Thrasher>40</Thrasher>
+				</options>
+			 </li>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers</xpath>
+		<value>
+			<li>
+				<kindDef>Combat</kindDef>
+				<commonality>0.5</commonality> <!-- extremely rare -->
+				<disallowedStrategies>
+					<li>Siege</li>
+				</disallowedStrategies>
+				<options>
+					<SuicideBomberAntigrain>5</SuicideBomberAntigrain>
+				</options>
+			 </li>
+		</value>
+	</Operation>
+	
+	<!-- post-biotech loading -->
+	<Operation Class="PatchOperationSequence" MayRequire="Ludeon.RimWorld.Biotech">
+		<operations>
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Biotech">
+				<xpath>Defs/FactionDef[defName="PirateWaster"]/pawnGroupMakers</xpath>
+				<value>
+					<li>
+						<kindDef>Combat</kindDef>
+						<commonality>15</commonality>
+						<disallowedStrategies>
+							<li>Siege</li>
+						</disallowedStrategies>
+						<options>
+							<SuicideBomberThree>2</SuicideBomberThree>
+							<SuicideBomberTwo>6</SuicideBomberTwo>
+							<SuicideBomberOne>12</SuicideBomberOne>
+							<Thrasher>40</Thrasher>
+						</options>
+					 </li>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Biotech">
+				<xpath>Defs/FactionDef[defName="PirateYttakin"]/pawnGroupMakers</xpath>
+				<value>
+					<li>
+						<kindDef>Combat</kindDef>
+						<commonality>15</commonality>
+						<disallowedStrategies>
+							<li>Siege</li>
+						</disallowedStrategies>
+						<options>
+							<SuicideBomberThree>2</SuicideBomberThree>
+							<SuicideBomberTwo>6</SuicideBomberTwo>
+							<SuicideBomberOne>12</SuicideBomberOne>
+							<Thrasher>40</Thrasher>
+						</options>
+					 </li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Biotech">
+				<xpath>Defs/FactionDef[defName="PirateWaster"]/pawnGroupMakers</xpath>
+				<value>
+					<li>
+						<kindDef>Combat</kindDef>
+						<commonality>0.5</commonality> <!-- extremely rare -->
+						<disallowedStrategies>
+							<li>Siege</li>
+						</disallowedStrategies>
+						<options>
+							<SuicideBomberAntigrain>5</SuicideBomberAntigrain>
+						</options>
+					 </li>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Biotech">
+				<xpath>Defs/FactionDef[defName="PirateYttakin"]/pawnGroupMakers</xpath>
+				<value>
+					<li>
+						<kindDef>Combat</kindDef>
+						<commonality>0.5</commonality> <!-- extremely rare -->
+						<disallowedStrategies>
+							<li>Siege</li>
+						</disallowedStrategies>
+						<options>
+							<SuicideBomberAntigrain>5</SuicideBomberAntigrain>
+						</options>
+					 </li>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

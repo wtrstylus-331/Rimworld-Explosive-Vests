@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="UnfinishedBase">
+    <defName>UnfinishedExplosiveVest</defName>
+    <category>Item</category>
+    <label>unfinished explosive vest</label>
+    <graphicData>
+      <texPath>Things/Item/Unfinished/UnfinishedExplosiveVest</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<stuffCategories Inherit="False" />
+  </ThingDef>
+  
+  <ThingDef ParentName="UnfinishedBase">
+    <defName>UnfinishedExplosiveVestTwo</defName>
+    <category>Item</category>
+    <label>unfinished explosive vest II</label>
+    <graphicData>
+      <texPath>Things/Item/Unfinished/UnfinishedExplosiveVest2</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<stuffCategories Inherit="False" />
+  </ThingDef>
+  
+  <ThingDef ParentName="UnfinishedBase">
+    <defName>UnfinishedExplosiveVestThree</defName>
+    <category>Item</category>
+    <label>unfinished explosive vest III</label>
+    <graphicData>
+      <texPath>Things/Item/Unfinished/UnfinishedExplosiveVest3</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<stuffCategories Inherit="False" />
+  </ThingDef>
+  
+  <ThingDef ParentName="UnfinishedBase">
+    <defName>UnfinishedExplosiveVestAntigrain</defName>
+    <category>Item</category>
+    <label>unfinished antigrain vest</label>
+    <graphicData>
+      <texPath>Things/Item/Unfinished/UnfinishedExplosiveVestAntigrain</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<stuffCategories Inherit="False" />
+  </ThingDef>
+  
+  <ThingDef ParentName="UnfinishedBase" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>UnfinishedExplosiveVestKid</defName>
+    <category>Item</category>
+    <label>unfinished kid explosive vest I</label>
+    <graphicData>
+      <texPath>Things/Item/Unfinished/UnfinishedExplosiveVestKid</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<stuffCategories Inherit="False" />
+  </ThingDef>
+  
+  <ThingDef ParentName="UnfinishedBase" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>UnfinishedExplosiveVestKidTwo</defName>
+    <category>Item</category>
+    <label>unfinished kid explosive vest II</label>
+    <graphicData>
+      <texPath>Things/Item/Unfinished/UnfinishedExplosiveVestKidTwo</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<stuffCategories Inherit="False" />
+  </ThingDef>
+  
+  <ThingDef ParentName="UnfinishedBase" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>UnfinishedExplosiveVestKidThree</defName>
+    <category>Item</category>
+    <label>unfinished kid explosive vest III</label>
+    <graphicData>
+      <texPath>Things/Item/Unfinished/UnfinishedExplosiveVestKidThree</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<stuffCategories Inherit="False" />
+  </ThingDef>
+  
+  <ThingDef ParentName="UnfinishedBase" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>UnfinishedAntigrainVestKid</defName>
+    <category>Item</category>
+    <label>unfinished kid antigrain vest</label>
+    <graphicData>
+      <texPath>Things/Item/Unfinished/UnfinishedAntigrainVestKid</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<stuffCategories Inherit="False" />
+  </ThingDef>
+</Defs>
